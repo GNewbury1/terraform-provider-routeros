@@ -52,6 +52,12 @@ func Provider() *schema.Provider {
 			"routeros_interface_bridge":         resourceInterfaceBridge(),
 			"routeros_interface_wireguard":      resourceInterfaceWireguard(),
 			"routeros_interface_wireguard_peer": resourceInterfaceWireguardPeer(),
+			"routeros_capsman_channel":          resourceCapsManChannel(),
+			"routeros_capsman_datapath":         resourceCapsManDatapath(),
+			"routeros_capsman_security":         resourceCapsManSecurity(),
+			"routeros_capsman_manager":          resourceCapsManManager(),
+			"routeros_capsman_provisioning":     resourceCapsManProvisioning(),
+			"routeros_capsman_configuration":    resourceCapsManConfiguration(),
 		},
 		DataSourcesMap: map[string]*schema.Resource{
 			"routeros_ip_addresses": datasourceIPAddresses(),
